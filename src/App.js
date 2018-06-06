@@ -25,7 +25,7 @@ class App extends Component {
     console.log(data.data.success.amout)
     this.setState({
       alert: true,
-      alertMessage: `Success! ${data.data.success.description}`,
+      alertMessage: `Success! ${data.data.success.description} You have been charged $${this.state.amountToCharge / 100}!`,
       currentBalance: ((this.state.currentBalance * 100) - data.data.success.amount) / 100
     })
   }
